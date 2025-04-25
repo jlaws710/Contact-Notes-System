@@ -18,7 +18,7 @@ import java.util.UUID;
 public class JwtUtil {
     private final String secret = UUID.randomUUID().toString();
 
-    // Method to sign and create a JWT using the injected secret
+    // Method to sign and create a JWT
     public String generateToken(String username) throws IllegalArgumentException, JWTCreationException {
         return JWT.create()
                 .withSubject("User Details")
@@ -28,7 +28,7 @@ public class JwtUtil {
                 .sign(Algorithm.HMAC256(secret));
     }
 
-    // Method to verify the JWT and then decode and extract the user email stored in the payload of the token
+    // Method to verify the JWT
     public String validateTokenAndRetrieveSubject(String token)throws JWTVerificationException {
         JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret))
                 .withSubject("User Details")
