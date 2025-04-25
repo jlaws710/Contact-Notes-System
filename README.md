@@ -1,4 +1,3 @@
-# Contact-Notes-System
 # Read Me First
 ## Description
 * This is a Backend Service for managing contact notes.
@@ -13,6 +12,8 @@
 ### Features
 * User authentication is handled via database using Spring Security.
 * Supports full CRUD operations for Contacts and Notes attached to contacts.
+* A Bearer token is issued via user login.
+* The token is needed for accessing contact and note endpoints.
 
 ## Getting Started
 ### Installation
