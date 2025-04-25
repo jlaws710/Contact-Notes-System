@@ -1,0 +1,23 @@
+-- Create contacts table
+CREATE TABLE IF NOT EXISTS contact (
+  id SERIAL PRIMARY KEY,
+  first_name VARCHAR(255) NOT NULL,
+  last_name VARCHAR(255) NOT NULL,
+  email VARCHAR(255) UNIQUE NOT NULL
+);
+
+-- Create notes table
+CREATE TABLE IF NOT EXISTS note (
+  id SERIAL PRIMARY KEY,
+  contact_id INTEGER REFERENCES contact(email) ON DELETE CASCADE,
+  body TEXT NOT NULL,
+  created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Create users table
+CREATE TABLE IF NOT EXISTS users (
+  id SERIAL PRIMARY KEY,
+  username VARCHAR(255) NOT NULL,
+  password VARCHAR(255),
+  role VARCHAR(255) NOT NULL
+ );
