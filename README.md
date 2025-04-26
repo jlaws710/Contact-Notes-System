@@ -83,5 +83,5 @@ An API Tool or Command line Tool is required.
 
 ### Improvements
 1. Refresh token pattern
-2. Use a queue or eventn bus to decouple note creation.
+2. Use a queue or event bus to decouple note creation.
 3. Add integration tests
