@@ -7,7 +7,6 @@
 * Gin
 * Postgres
 * Docker
-* Gradle
 
 ### Features
 * User authentication is handled via database using JWT middleware.
@@ -18,8 +17,7 @@
 ## Getting Started
 ### Installation
 1. Clone the repository: git clone <repository-url>
-2. Navigate to the root directory and run 'gradle clean'
-3. Run 'docker-compose up' to start Postgres
+2. Navigate to the root directory and run 'docker-compose up' to start Postgres
 4. Run 'go run main.go' to start the program
 
 ### API Endpoint Examples:
